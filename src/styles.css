@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pine: #193c2c;
+  --color-deep: #102b20;
+  --color-leaf: #3f743d;
+  --color-lime: #eaf0d8;
+  --color-cream: #f8f5ec;
+  --color-sand: #eee8d9;
+  --color-orange: #d96827;
+  --color-ink: #25352b;
+  --font-display: Georgia, 'Times New Roman', serif;
+}
+:root { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #25352b; background: #f8f5ec; font-synthesis:none; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin:0; min-width:320px; -webkit-font-smoothing: antialiased; }
+button,a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+img { display:block; max-width:100%; }
+::selection { background: #d4e7bc; color: #193c2c; }
+.font-display { font-family: var(--font-display); }
+.container-page { width:min(100% - 40px, 1152px); margin-inline:auto; }
+.grain { background-image: radial-gradient(rgba(63,116,61,.095) .7px,transparent .7px); background-size: 18px 18px; }
+.hero-bg { background: radial-gradient(ellipse 45% 70% at 77% 36%,#efe9d7 0%,transparent 78%),linear-gradient(160deg,#f8f5ec 60%,#eff2e2 100%); }
+.highlight-script { color:#c5622c; font-style:italic; }
+.photo-card { box-shadow: 0 24px 70px rgba(20,45,30,.15); }
+.book-cover { box-shadow: 5px 8px 0 #e7e3d5, 12px 18px 28px rgba(19,40,27,.22); }
+.section-kicker { font-size:.74rem; font-weight:800; letter-spacing:.15em; color:#a45c27; text-transform:uppercase; }
+.section-heading { font-family:var(--font-display); color:#193c2c; font-size:clamp(2.1rem,4.3vw,3.45rem); line-height:1.08; letter-spacing:-.035em; }
+.btn-primary { display:inline-flex;justify-content:center;align-items:center;gap:10px;border-radius:999px;background:#d96827;color:white;font-weight:800;box-shadow:0 7px 0 #ad471c, 0 14px 20px rgba(120,56,22,.13);transition:transform .17s,box-shadow .17s,background .17s;text-decoration:none; }
+.btn-primary:hover { transform:translateY(-2px); background:#bc561f; box-shadow:0 9px 0 #943c15,0 18px 24px rgba(120,56,22,.17); }
+.btn-primary:active { transform:translateY(4px); box-shadow:0 3px 0 #ad471c; }
+.btn-primary:focus-visible,.btn-outline:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible { outline:3px solid #d96827;outline-offset:4px; }
+.btn-outline { display:inline-flex;justify-content:center;align-items:center;gap:8px;border-radius:999px;border:1.5px solid #bfcbb5;color:#193c2c;background:rgba(255,255,255,.5);font-weight:800;transition:background .2s,border-color .2s;text-decoration:none; }
+.btn-outline:hover { background:white;border-color:#52764a; }
+.tag { display:inline-flex;align-items:center;gap:.35rem;padding:.35rem .7rem;border-radius:99px;font-weight:800;font-size:.72rem; }
+.tag-facil { background:#e9f4df;color:#376232; }
+.tag-intermediaria { background:#fff0d7;color:#a25316; }
+.tag-avancada { background:#fee8e3;color:#a43f2b; }
+.recipe-list { columns:2; column-gap:1.5rem; }
+.recipe-list > li { break-inside:avoid; margin-bottom:.72rem; }
+.faq-item summary { list-style:none; }
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item[open] .faq-arrow { transform:rotate(180deg); }
+.faq-arrow { transition:transform .2s; }
+@media (max-width: 640px) { .container-page { width:min(100% - 32px,1152px); } .recipe-list { columns:1; } html { scroll-padding-top:68px; } }
+@media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto;} *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;} }
